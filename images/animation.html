@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation with Css</title>
+	<style type="text/css">
+		.anim{
+			height: 100px;
+			width: 10%;
+			background-color: orange;
+			animation-name:myanim; 
+			animation-duration: 5s;
+			animation-delay: 2s;
+			/*animation-direction: alternate-reverse;*/
+			/*animation-iteration-count: infinite;*/
+			animation-fill-mode: backwards;
+			position: absolute;
+			top: 10px;
+			left:5px;
+		}
+		@keyframes myanim{
+			from{
+				background-color: orange;
+			top: 10px;
+			left:5px;
+	
+			}
+			to{
+				background-color: red;
+			top: 10px;
+			left:500px;
+	
+			}
+		}
+.animation2{
+
+	width: 80%;
+	margin:auto;
+	margin-top: 100px;
+	height: 300px;
+	/*background-color: orange;*/
+	background-image: url('11.jpg');
+	animation-name: mymove;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-duration: 10s;
+	background-color: blue;
+	background-size: 200px;
+	background-repeat: no-repeat;
+}
+@keyframes mymove{
+	0%{background-image: url('12.jpg');
+	}
+10%{background-image: url('13.jpg');
+	}
+	20%{background-image: url('14.jpg');
+	}
+	30%{background-image: url('15.jpg');
+	}
+	40%{
+		
+		background-color: blue;
+	}
+	50%{
+background-color: #3ac;
+	}
+	60%{
+background-color: #933;
+	}
+	70%{
+background-color: #339;
+	}
+	80%{
+background-color: #393;
+	}
+	90%{
+background-color: #142;
+	}
+}
+.grade{
+	width:40%;
+	height: 300px;
+	margin-top: 20px;
+	border-radius: 50%;
+	/*background-color: #3ac;*/
+	/*background-image: linear-gradient(green,yellow,red,blue);*/
+
+	/*background-image: linear-gradient(to right bottom,red,yellow);*/
+
+	/*background-image: linear-gradient(360deg,yellow,red);*/
+
+	/*background-image: repeating-linear-gradient(green,yellow 10%,red 20%);*/
+	/*background-image: radial-gradient(red,yellow,green,blue);*/
+/*background-image: radial-gradient(red 15%,yellow 30%,green 60%,blue 20%);*/
+	background-image:radial-gradient(red 5%,yellow,green 50%);
+
+}
+.box-translate
+{
+	width: 100px;
+	height: 100px;
+	background-color: #399;
+	/*transform: translate(100px,100px);*/
+	margin: 20px;
+	/*transform:rotate(40deg);*/
+	/*transform: scale(1.5,2);*/
+	/*transform: scaleX(2);*/
+	transform: scaleY(2);
+	transform: skew(10deg,0deg);
+	transform: skewX(20deg);
+}
+.container,.container-2{
+	width:100%;
+	height:auto;
+	background-color: #142170;
+	display: flex;
+	flex-wrap: wrap-reverse;
+	flex-direction: row-reverse;
+	flex-flow: row wrap;
+	justify-content:space-between;
+}
+.container-2{
+	margin-top: 20px;
+	align-content:  center;
+	height: 800px;
+}
+.container-box{
+	/*display: inline-block;*/
+	width: 20%;
+	height: 80px;
+	background-color: #3ac;
+	font-size: 22px;
+	color:white;
+	margin:2%;
+	/*padding:auto;*/
+}
+.parent{
+	width:100%;
+	height: 500px;
+	background-color: orange;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.child{
+	width:50%;
+	height: 250px;
+	background-color: #172;
+	/*margin-top:-40px;*/
+}
+.row{
+	background-color: #3ac;
+padding: 5%;
+color: white;font-size: 22px;
+	/*display: flex;*/
+column-count: 9;
+column-rule: 2px solid white;
+column-rule-style: dashed;
+column-rule-color:gray;
+column-rule-width: 5px;
+column-gap: 100px;
+column-width: 100px;
+}
+.col-3{
+	color:white;
+	/*background-color: #172;*/
+	padding: 5%;
+	margin:5%;
+	/*border-right: 2px solid white;*/
+}
+	</style>
+
+
+</head>
+<body>
+<h1>Animation Property in css</h1>
+<div class="anim">
+	THis is animated.
+</div>
+<div class="animation2">
+	
+</div>
+<div class="grade"></div>
+<div class="box-translate">
+	Hello Box
+</div>
+<div class="container">
+	<div class="container-box" style="order:10;flex-grow: 1">1</div><div class="container-box" style="order:3">2</div><div class="container-box" style="order:4">3</div><div class="container-box" style="order:1">4</div><div class="container-box" style="order:11;flex-shrink: 0">5</div><div class="container-box" style="order:12">6</div><div class="container-box" style="order:5">7</div><div class="container-box" style="order:6">8</div><div class="container-box" style="order:7">9</div><div class="container-box" style="order:8">10</div><div class="container-box" style="order:9">11</div><div class="container-box" style="order:2">12</div><div class="container-box" style="flex-basis: 1000px;">13</div>
+</div>
+<div class="parent">
+	<div class="child"></div>
+</div>
+<div class="container-2">
+	<div class="container-box">1</div><div class="container-box">2</div><div class="container-box">3</div><div class="container-box">4</div><div class="container-box">5</div><div class="container-box">6</div><div class="container-box">7</div><div class="container-box">8</div><div class="container-box">9</div><div class="container-box">10</div><div class="container-box">11</div><div class="container-box">12</div><div class="container-box">13</div>
+</div>
+<div class="row">
+For any module that requires default content, the export process is as follows: Generate a hal+json file for each entity to be exported using the drush commands​
+For any module that requires default content, the export process is as follows: Generate a hal+json file for each entity to be exported using the drush commands​ .
+
+For any module that requires default content, the export process is as follows: Generate a hal+json file for each entity to be exported using the drush commands​ 	
+</div>
+
+
+</body>
+</html>
